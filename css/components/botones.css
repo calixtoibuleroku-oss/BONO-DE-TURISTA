@@ -1,0 +1,158 @@
+/* ============================================================
+   BOTONES.CSS — Sistema de botones
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+/* ── Base común ── */
+.primer-btn,
+.boton-principal,
+.btn-prinncipal,
+.btn-rapido,
+[class*="btn-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-2);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radio-full);
+  transition: var(--trans-rebote);
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ── Botón principal (oro) ── */
+.primer-btn,
+#contenedorBono {
+  font-size: var(--tam-base);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-primario);
+  background: var(--grad-acento);
+  padding: var(--esp-4) var(--esp-8);
+  box-shadow: var(--sombra-acento);
+}
+
+.primer-btn:hover,
+#contenedorBono:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(212,160,23,.5);
+}
+
+.primer-btn:active,
+#contenedorBono:active {
+  transform: translateY(-1px) scale(.99);
+}
+
+/* ── Botón fantasma (outline) ── */
+.btn-fantasma {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--tam-base);
+  font-weight: 600;
+  color: var(--color-blanco);
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.4);
+  padding: calc(var(--esp-4) - 2px) var(--esp-8);
+  border-radius: var(--radio-full);
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: var(--trans-normal);
+}
+
+.btn-fantasma:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.7);
+  color: var(--color-blanco);
+  transform: translateY(-2px);
+}
+
+/* ── Botón modal / formulario ── */
+.boton-principal,
+.btn-prinncipal {
+  width: 100%;
+  font-size: var(--tam-base);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--color-primario);
+  background: var(--grad-acento);
+  padding: var(--esp-4) var(--esp-6);
+  border-radius: var(--radio-xl);
+  box-shadow: var(--sombra-acento);
+  margin-top: var(--esp-4);
+}
+
+.boton-principal:hover,
+.btn-prinncipal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(212,160,23,.5);
+}
+
+.boton-principal:active,
+.btn-prinncipal:active {
+  transform: translateY(0);
+}
+
+/* Estado deshabilitado */
+.boton-principal:disabled,
+.btn-prinncipal:disabled,
+.primer-btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Botones rápidos del chatbot ── */
+.btn-rapido {
+  font-size: var(--tam-xs);
+  font-weight: 500;
+  color: var(--color-primario);
+  background: rgba(212,160,23,.12);
+  border: 1px solid rgba(212,160,23,.3);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--radio-full);
+  cursor: pointer;
+  transition: var(--trans-normal);
+  white-space: nowrap;
+}
+
+.btn-rapido:hover {
+  background: var(--color-acento);
+  color: var(--color-primario);
+  border-color: var(--color-acento);
+  transform: translateY(-1px);
+}
+
+/* ── Spinner de carga en botón ── */
+.btn-cargando {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn-cargando::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: var(--color-primario);
+  border-radius: 50%;
+  animation: girar .7s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}

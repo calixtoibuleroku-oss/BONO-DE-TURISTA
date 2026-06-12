@@ -1,0 +1,250 @@
+/* ============================================================
+   HERO.CSS — Sección principal (tierra)
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+/* ── Sección hero ── */
+.contenedor-padre,
+#tierra {
+  background-image:  url(./bata-guinea-ecuatorial.jpg);
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: calc(80px + var(--esp-16)) var(--esp-16) var(--esp-16);
+  overflow: hidden;
+  gap: var(--esp-12);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ── Elementos geométricos de fondo ── */
+.contenedor-hijo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.geo-1, .geo-2, .geo-3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .15;
+}
+
+.geo-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #d4a017, transparent);
+  top: -200px;
+  right: -100px;
+  animation: flotacion 8s ease-in-out infinite;
+}
+
+.geo-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2d9d6e, transparent);
+  bottom: -100px;
+  left: -80px;
+  animation: flotacion 10s ease-in-out infinite reverse;
+}
+
+.geo-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #f0c040, transparent);
+  top: 40%;
+  left: 40%;
+  animation: flotacion 12s ease-in-out infinite 2s;
+}
+
+.posicion {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes flotacion {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(20px, -30px) scale(1.05); }
+  66%       { transform: translate(-15px, 20px) scale(.95); }
+}
+
+/* ── Texto de la hero ── */
+.contenedor-tierra {
+  position: relative;
+  z-index: var(--z-base);
+  max-width: 600px;
+}
+
+/* Revelación animada */
+.conntenedor-revelacion,
+.contenedor-revelacion {
+  display: inline-block;
+  font-size: var(--tam-xs);
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+  background: rgba(212,160,23,.12);
+  border: 1px solid rgba(212,160,23,.3);
+  padding: var(--esp-2) var(--esp-4);
+  border-radius: var(--radio-full);
+  margin-bottom: var(--esp-6);
+  animation: revelar .8s ease both;
+}
+
+.contenedor-revelacion-1 {
+  font-family: var(--fuente-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--color-blanco);
+  margin-bottom: var(--esp-6);
+  animation: revelar .8s ease .15s both;
+}
+
+.contenedor-revelacion-1 em {
+  font-style: italic;
+  color: var(--color-acento-claro);
+}
+
+.contenedor-revelacon-2 {
+  font-size: var(--tam-lg);
+  color: rgba(255,255,255,.75);
+  line-height: 1.8;
+  max-width: 50ch;
+  margin-bottom: var(--esp-10);
+  animation: revelar .8s ease .3s both;
+}
+
+.contenedor-revelacion-3 {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  flex-wrap: wrap;
+  animation: revelar .8s ease .45s both;
+}
+
+@keyframes revelar {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Tarjeta premium en hero ── */
+.contenedor-revelacion-4 {
+  position: relative;
+  z-index: var(--z-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: revelar .8s ease .6s both;
+}
+
+/* ── Estadísticas ── */
+.estadistica-padre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--color-primario);
+  padding: var(--esp-12) var(--esp-8);
+}
+
+.elemento-stad,
+.elemnto-stad,
+.elemento-estad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--esp-6) var(--esp-10);
+  gap: var(--esp-2);
+}
+
+.num-estad,
+.num-stad {
+  font-family: var(--fuente-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--color-blanco);
+  line-height: 1;
+}
+
+.std, .stad, .stad- {
+  font-size: var(--tam-xl);
+  font-weight: 700;
+  color: var(--color-acento);
+}
+
+.etiqueta-stad,
+.etiqueca-stad,
+.etiqueta-estad {
+  font-size: var(--tam-sm);
+  color: rgba(255,255,255,.6);
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+
+.stad-solo {
+  width: 1px;
+  height: 50px;
+  background: rgba(255,255,255,.12);
+  align-self: center;
+}
+
+/* ── Responsive Hero ── */
+@media (max-width: 900px) {
+  .contenedor-padre,
+  #tierra {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: calc(80px + var(--esp-10)) var(--esp-6) var(--esp-10);
+  }
+
+  .contenedor-revelacion-3 {
+    justify-content: center;
+  }
+
+  .contenedor-tierra {
+    max-width: 100%;
+  }
+
+  .conntenedor-revelacion,
+  .contenedor-revelacion {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-padre, #tierra {
+    padding: calc(70px + var(--esp-8)) var(--esp-4) var(--esp-8);
+  }
+
+  .contenedor-revelacion-1 {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .estadistica-padre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--esp-8) var(--esp-4);
+  }
+
+  .stad-solo { display: none; }
+
+  .elemento-stad,
+  .elemnto-stad,
+  .elemento-estad {
+    padding: var(--esp-5) var(--esp-4);
+  }
+}

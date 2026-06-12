@@ -1,0 +1,185 @@
+/* ============================================================
+   FORMULARIOS.CSS — Inputs, selects y grupos de formulario
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+/* ── Grupo de campo ── */
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  margin-bottom: var(--esp-5);
+}
+
+/* ── Fila de dos columnas ── */
+.fila-formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--esp-4);
+}
+
+/* ── Etiqueta ── */
+.grupo-formulario label {
+  font-size: var(--tam-sm);
+  font-weight: 600;
+  color: var(--color-texto);
+  letter-spacing: .02em;
+}
+
+/* ── Inputs y selects ── */
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: var(--esp-3) var(--esp-4);
+  font-size: var(--tam-base);
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  border: 1.5px solid rgba(10,61,46,.18);
+  border-radius: var(--radio-lg);
+  transition: var(--trans-normal);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.grupo-formulario select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230a3d2e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--esp-4) center;
+  padding-right: var(--esp-10);
+  cursor: pointer;
+}
+
+.grupo-formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+/* ── Estados ── */
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+  border-color: var(--color-primario-claro);
+  box-shadow: 0 0 0 3px rgba(26,107,74,.12);
+  background: var(--color-blanco);
+}
+
+/* Estado error */
+.grupo-formulario input.campo-error,
+.grupo-formulario select.campo-error,
+.grupo-formulario textarea.campo-error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(192,57,43,.1);
+}
+
+/* Estado válido */
+.grupo-formulario input.campo-valido,
+.grupo-formulario select.campo-valido,
+.grupo-formulario textarea.campo-valido {
+  border-color: var(--color-exito);
+  box-shadow: 0 0 0 3px rgba(26,122,74,.1);
+}
+
+/* ── Mensaje de error inline ── */
+.mensaje-error {
+  font-size: var(--tam-xs);
+  color: var(--color-error);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--esp-1);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity .25s ease, height .25s ease;
+}
+
+.mensaje-error.visible {
+  opacity: 1;
+  height: auto;
+}
+
+.mensaje-error::before {
+  content: '⚠';
+  font-size: .85em;
+}
+.grupo-formulario input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primario);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Fila de checkbox + label */
+.grupo-formulario:has(input[type="checkbox"]),
+[class*="grupo'formulario"]:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+[class*="grupo'formulario"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  margin-bottom: var(--esp-5);
+}
+
+[class*="grupo'formulario"] label {
+  font-size: var(--tam-sm);
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+[class*="grupo'formulario"] input,
+[class*="grupo'formulario"] select,
+[class*="grupo'formulario"] textarea {
+  width: 100%;
+  padding: var(--esp-3) var(--esp-4);
+  font-size: var(--tam-base);
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  border: 1.5px solid rgba(10,61,46,.18);
+  border-radius: var(--radio-lg);
+  transition: var(--trans-normal);
+}
+
+[class*="grupo'formulario"] input:focus,
+[class*="grupo'formulario"] select:focus,
+[class*="grupo'formulario"] textarea:focus {
+  border-color: var(--color-primario-claro);
+  box-shadow: 0 0 0 3px rgba(26,107,74,.12);
+}
+
+/* ── Mensaje de éxito del contacto ── */
+[class*="mansaje'oculto"],
+.mensaje-contacto-ok {
+  display: none;
+  font-size: var(--tam-sm);
+  font-weight: 600;
+  color: var(--color-exito);
+  background: rgba(26,122,74,.08);
+  border: 1px solid rgba(26,122,74,.25);
+  border-radius: var(--radio-lg);
+  padding: var(--esp-3) var(--esp-4);
+  margin-top: var(--esp-3);
+  text-align: center;
+}
+
+[class*="mansaje'oculto"].visible,
+.mensaje-contacto-ok.visible {
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .fila-formulario {
+    grid-template-columns: 1fr;
+  }
+}

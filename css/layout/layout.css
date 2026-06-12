@@ -1,0 +1,84 @@
+/* ============================================================
+   estructura de página
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+/* ── Contenedor principal ── */
+.contenedor {
+  width: 200%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--esp-8);
+}
+
+.contenedor-ancho {
+  width: 50%;
+  max-width: var(--ancho-max-lg);
+  margin-inline: auto;
+  padding-inline: var(--esp-8);
+}
+
+/* ── Flexbox helpers ── */
+.flex        { display: flex; }
+.flex-col    { display: flex; flex-direction: column; }
+.flex-centro { display: flex; align-items: center; justify-content: center; }
+.flex-entre  { display: flex; align-items: center; justify-content: space-between; }
+.flex-inicio { display: flex; align-items: flex-start; }
+.flex-envoltura { flex-wrap: wrap; }
+.gap-4  { gap: var(--esp-4); }
+.gap-6  { gap: var(--esp-6); }
+.gap-8  { gap: var(--esp-8); }
+.gap-12 { gap: var(--esp-12); }
+
+/* ── Grid helpers ── */
+.grid { display: grid; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* ── Espaciado de secciones ── */
+section {
+  padding-block: var(--esp-24);
+}
+
+/* ── Utilidades de espaciado ── */
+.mt-4  { margin-top: var(--esp-4); }
+.mt-6  { margin-top: var(--esp-6); }
+.mt-8  { margin-top: var(--esp-8); }
+.mt-12 { margin-top: var(--esp-12); }
+.mb-4  { margin-bottom: var(--esp-4); }
+.mb-6  { margin-bottom: var(--esp-6); }
+.mb-8  { margin-bottom: var(--esp-8); }
+.mb-12 { margin-bottom: var(--esp-12); }
+
+.pt-8  { padding-top: var(--esp-8); }
+.pb-8  { padding-bottom: var(--esp-8); }
+
+/* ── Separador visual ── */
+.separador {
+  width: 60px;
+  height: 3px;
+  background: var(--grad-acento);
+  border-radius: var(--radio-full);
+  margin: var(--esp-6) auto;
+}
+
+/* ── Ocultar / mostrar ── */
+.oculto { display: none !important; }
+.invisible { visibility: hidden; }
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 1024px) {
+  .contenedor,
+  .contenedor-ancho { padding-inline: var(--esp-6); }
+  section { padding-block: var(--esp-16); }
+}
+
+@media (max-width: 768px) {
+  .contenedor,
+  .contenedor-ancho { padding-inline: var(--esp-4); }
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+  section { padding-block: var(--esp-12); }
+}

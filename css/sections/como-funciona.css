@@ -1,0 +1,69 @@
+/* ============================================================
+   COMO-FUNCIONA.CSS — Sección de pasos del proceso
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+.como-funciona {
+  background: var(--color-superficie);
+  padding-block: var(--esp-24);
+  padding-inline: var(--esp-8);
+}
+
+.como-funciona .encabezado {
+  text-align: center;
+  margin-bottom: var(--esp-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.como-funciona .seccion-titulo {
+  font-size: clamp(var(--tam-3xl), 4vw, var(--tam-5xl));
+  color: var(--color-texto);
+}
+
+/* ── Grid de pasos ── */
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--esp-6);
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  position: relative;
+}
+
+/* Línea conectora entre pasos */
+.pasos::before {
+  content: '';
+  position: absolute;
+  top: 52px; /* altura del icono / 2 */
+  left: calc(var(--esp-6) / 2 + 26px);
+  right: calc(var(--esp-6) / 2 + 26px);
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-acento) 0%,
+    rgba(212,160,23,.3) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .pasos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pasos::before { display: none; }
+}
+
+@media (max-width: 540px) {
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+
+  .como-funciona {
+    padding-inline: var(--esp-4);
+  }
+}

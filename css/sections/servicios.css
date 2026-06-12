@@ -1,0 +1,193 @@
+/* ============================================================
+   SERVICIOS.CSS — Sección de servicios y QR grande
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+.seccion-servicios {
+  background-color: rgb(175, 155, 42);
+  padding-block: var(--esp-24);
+}
+
+.contenedor-servicios {
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--esp-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--esp-16);
+  align-items: center;
+}
+
+/* ── Texto ── */
+.texto-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.etiqueta-servicio {
+  display: inline-block;
+  font-size: var(--tam-xs);
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+  background: rgba(212,160,23,.1);
+  border: 1px solid rgba(212,160,23,.25);
+  padding: var(--esp-2) var(--esp-4);
+  border-radius: var(--radio-full);
+  width: fit-content;
+}
+
+.titulo-secion {
+  font-size: clamp(var(--tam-3xl), 4vw, var(--tam-5xl));
+  font-weight: 700;
+  color: var(--color-texto);
+  line-height: 1.15;
+}
+
+.descripcion-servicios {
+  font-size: var(--tam-base);
+  color: var(--color-texto-suave);
+  line-height: 1.8;
+  max-width: 48ch;
+}
+
+/* ── Lista de servicios ── */
+.lista-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}
+
+.lista-servicios li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--esp-4);
+  padding: var(--esp-4);
+  background: var(--color-superficie);
+  border-radius: var(--radio-lg);
+  border: 1px solid rgba(10,61,46,.06);
+  transition: var(--trans-normal);
+  cursor: default;
+}
+
+.lista-servicios li:hover {
+  background: rgba(212,160,23,.05);
+  border-color: rgba(212,160,23,.2);
+  transform: translateX(4px);
+}
+
+.lista-servicios li .serv-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-fondo);
+  border-radius: var(--radio-lg);
+  flex-shrink: 0;
+  box-shadow: var(--sombra-sm);
+}
+
+.lista-servicios li .serv-texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.lista-servicios li .serv-texto strong {
+  font-size: var(--tam-sm);
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.lista-servicios li .serv-texto span {
+  font-size: var(--tam-xs);
+  color: var(--color-texto-claro);
+}
+
+/* ── QR grande ── */
+.servicios-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-5);
+}
+
+.qr-grande {
+  width: 260px;
+  height: 260px;
+  background: var(--color-blanco);
+  border: 3px solid var(--color-primario);
+  border-radius: var(--radio-xl);
+  padding: var(--esp-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sombra-xl);
+  position: relative;
+  transition: var(--trans-lento);
+}
+
+.qr-grande:hover {
+  transform: scale(1.04);
+  box-shadow: 0 24px 70px rgba(10,61,46,.25);
+}
+
+.qr-grande::before,
+.qr-grande::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--color-acento);
+  border-style: solid;
+}
+
+.qr-grande::before {
+  top: -3px;
+  left: -3px;
+  border-width: 3px 0 0 3px;
+  border-radius: var(--radio-sm) 0 0 0;
+}
+
+.qr-grande::after {
+  bottom: -3px;
+  right: -3px;
+  border-width: 0 3px 3px 0;
+  border-radius: 0 0 var(--radio-sm) 0;
+}
+
+.etiqueca-qr {
+  font-size: var(--tam-xs);
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--color-texto-claro);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .contenedor-servicios {
+    grid-template-columns: 1fr;
+    gap: var(--esp-10);
+  }
+
+  .servicios-visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 540px) {
+  .contenedor-servicios {
+    padding-inline: var(--esp-4);
+  }
+
+  .qr-grande {
+    width: 220px;
+    height: 220px;
+  }
+}

@@ -1,0 +1,71 @@
+/* ============================================================
+   ESTABLECIMIENTOS.CSS — Grid de socios
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+.seccion-establecimientos {
+  background: var(--color-superficie);
+  padding-block: var(--esp-24);
+  padding-inline: var(--esp-8);
+}
+
+/* ── Grid de tarjetas ── */
+.cuadro-establecimientos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--esp-6);
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+}
+
+/* Animación de entrada escalonada */
+.cuadro-establecimientos .tarjeta-estab {
+  animation: entradaTarjeta .5s ease both;
+}
+
+.cuadro-establecimientos .tarjeta-estab:nth-child(1) { animation-delay: .05s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(2) { animation-delay: .10s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(3) { animation-delay: .15s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(4) { animation-delay: .20s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(5) { animation-delay: .25s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(6) { animation-delay: .30s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(7) { animation-delay: .35s; }
+.cuadro-establecimientos .tarjeta-estab:nth-child(8) { animation-delay: .40s; }
+
+@keyframes entradaTarjeta {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Estado vacío ── */
+.estab-vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--esp-16);
+  color: var(--color-texto-suave);
+  font-size: var(--tam-lg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .seccion-establecimientos {
+    padding-inline: var(--esp-4);
+  }
+
+  .cuadro-establecimientos {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--esp-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .cuadro-establecimientos {
+    grid-template-columns: 1fr;
+  }
+}

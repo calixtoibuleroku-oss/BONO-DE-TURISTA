@@ -1,0 +1,131 @@
+/* ============================================================
+   CONTACTO.CSS — Sección de contacto para establecimientos
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+.seccion-contacto {
+  background: var(--color-fondo);
+  padding-block: var(--esp-24);
+}
+
+/* ── Grid de dos columnas ── */
+.contenedor-contacto {
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--esp-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--esp-16);
+  align-items: start;
+}
+
+/* ── Columna de texto ── */
+.texto-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+  position: sticky;
+  top: calc(80px + var(--esp-8));
+}
+
+.texto-contacto h2 {
+  font-size: clamp(var(--tam-2xl), 4vw, var(--tam-4xl));
+  font-weight: 800;
+  color: var(--color-texto);
+  line-height: 1.2;
+}
+
+.texto-contacto > p {
+  font-size: var(--tam-base);
+  color: var(--color-texto-suave);
+  line-height: 1.8;
+  max-width: 42ch;
+}
+
+/* ── Bloque de información de contacto ── */
+.informacion-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-6);
+  background: var(--color-superficie);
+  border-radius: var(--radio-xl);
+  border: 1px solid rgba(10,61,46,.08);
+  margin-top: var(--esp-2);
+}
+
+.informacion-contacto p {
+  font-size: var(--tam-sm);
+  color: var(--color-texto-suave);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--esp-2);
+}
+
+.informacion-contacto p:first-child { color: var(--color-texto); font-weight: 600; }
+
+/* ── Columna de formulario ── */
+.seccion-contacto > .contenedor-contacto > .contenedor-contacto {
+  background: var(--color-blanco);
+  border: 1px solid rgba(10,61,46,.08);
+  border-radius: var(--radio-2xl);
+  padding: var(--esp-8);
+  box-shadow: var(--sombra-md);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-contacto > .contenedor-contacto > .contenedor-contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--esp-8);
+  right: var(--esp-8);
+  height: 3px;
+  background: var(--grad-acento);
+  border-radius: 0 0 var(--radio-full) var(--radio-full);
+}
+
+/* ── Mensaje de confirmación del contacto ── */
+#mensajeContacto {
+  display: none;
+  font-size: var(--tam-sm);
+  font-weight: 600;
+  color: var(--color-exito);
+  background: rgba(26,122,74,.08);
+  border: 1px solid rgba(26,122,74,.25);
+  border-radius: var(--radio-lg);
+  padding: var(--esp-3) var(--esp-4);
+  margin-top: var(--esp-3);
+  text-align: center;
+  animation: revelar .3s ease;
+}
+
+#mensajeContacto.visible {
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .contenedor-contacto {
+    grid-template-columns: 1fr;
+    gap: var(--esp-10);
+  }
+
+  .texto-contacto {
+    position: static;
+  }
+}
+
+@media (max-width: 540px) {
+  .contenedor-contacto {
+    padding-inline: var(--esp-4);
+  }
+
+  .seccion-contacto > .contenedor-contacto > .contenedor-contacto {
+    padding: var(--esp-6) var(--esp-4);
+  }
+}

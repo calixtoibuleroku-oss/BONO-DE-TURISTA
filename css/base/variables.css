@@ -1,0 +1,110 @@
+/* ============================================================
+   VARIABLES.CSS — Tokens de diseño globales
+   Bono de Turista · Guinea Ecuatorial
+   ============================================================ */
+
+:root {
+  /* ── Paleta principal ── */
+  --color-primario:      #0a3d2e;   /* verde selva profundo */
+  --color-primario-claro:#1a6b4a;
+  --color-primario-hover: #0d4f3a;
+  --color-acento:        #d4a017;   /* oro africano */
+  --color-acento-claro:  #f0c040;
+  --color-acento-hover:  #b8880f;
+
+  --color-superficie:    #f7f4ef;   /* crema cálida */
+  --color-fondo:         #ffffff;
+  --color-fondo-alt:     #f0ede6;
+  --color-oscuro:        #0d1f17;
+  --color-texto:         #1c2e22;
+  --color-texto-suave:   #4a6354;
+  --color-texto-claro:   #7a9486;
+  --color-blanco:        #ffffff;
+  --color-error:         #c0392b;
+  --color-exito:         #1a7a4a;
+
+  /* ── Gradientes ── */
+  --grad-hero:    linear-gradient(135deg, #0a3d2e 0%, #1a6b4a 50%, #0d4f3a 100%);
+  --grad-acento:  linear-gradient(135deg, #d4a017 0%, #f0c040 100%);
+  --grad-oscuro:  linear-gradient(180deg, #0d1f17 0%, #0a3d2e 100%);
+  --grad-tarjeta: linear-gradient(135deg, #1a6b4a 0%, #0a3d2e 60%, #0d2a1e 100%);
+
+  /* ── Tipografía ── */
+  --fuente-display:  'Playfair Display', Georgia, serif;
+  --fuente-cuerpo:   'DM Sans', 'Helvetica Neue', sans-serif;
+  --fuente-mono:     'Courier New', monospace;
+
+  --tam-xs:    0.75rem;
+  --tam-sm:    0.875rem;
+  --tam-base:  1rem;
+  --tam-lg:    1.125rem;
+  --tam-xl:    1.25rem;
+  --tam-2xl:   1.5rem;
+  --tam-3xl:   1.875rem;
+  --tam-4xl:   2.25rem;
+  --tam-5xl:   3rem;
+  --tam-6xl:   3.75rem;
+  --tam-7xl:   4.5rem;
+
+  /* ── Espaciado ── */
+  --esp-1:  0.25rem;
+  --esp-2:  0.5rem;
+  --esp-3:  0.75rem;
+  --esp-4:  1rem;
+  --esp-5:  1.25rem;
+  --esp-6:  1.5rem;
+  --esp-8:  2rem;
+  --esp-10: 2.5rem;
+  --esp-12: 3rem;
+  --esp-16: 4rem;
+  --esp-20: 5rem;
+  --esp-24: 6rem;
+  --esp-32: 8rem;
+
+  /* ── Bordes ── */
+  --radio-sm:   0.25rem;
+  --radio-md:   0.5rem;
+  --radio-lg:   0.75rem;
+  --radio-xl:   1rem;
+  --radio-2xl:  1.5rem;
+  --radio-full: 9999px;
+
+  /* ── Sombras ── */
+  --sombra-sm:  0 1px 3px rgba(10,61,46,.12), 0 1px 2px rgba(10,61,46,.08);
+  --sombra-md:  0 4px 16px rgba(10,61,46,.15), 0 2px 6px rgba(10,61,46,.08);
+  --sombra-lg:  0 10px 40px rgba(10,61,46,.20), 0 4px 12px rgba(10,61,46,.10);
+  --sombra-xl:  0 20px 60px rgba(10,61,46,.25), 0 8px 24px rgba(10,61,46,.12);
+  --sombra-acento: 0 8px 30px rgba(212,160,23,.35);
+
+
+  /* ── Transiciones ── */
+  --trans-rapido:  all .15s ease;
+  --trans-normal:  all .25s ease;
+  --trans-lento:   all .4s cubic-bezier(.25,.8,.25,1);
+  --trans-rebote:  all .5s cubic-bezier(.34,1.56,.64,1);
+
+  /* ── Z-index ── */
+  --z-base:    1;
+  --z-elevado: 10;
+  --z-nav:     100;
+  --z-modal:   200;
+  --z-chatbot: 150;
+  --z-tooltip: 300;
+
+  /* ── Contenedor ── */
+  --ancho-max:     1200px;
+  --ancho-max-lg:  1440px;
+  --padding-pagina: 0 var(--esp-8);
+}
+
+/* ── Modo oscuro (automático) ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo:       #0d1f17;
+    --color-fondo-alt:   #0a1a12;
+    --color-superficie:  #122a1e;
+    --color-texto:       #e8f0eb;
+    --color-texto-suave: #9ab8a6;
+    --color-blanco:      #e8f0eb;
+  }
+}
