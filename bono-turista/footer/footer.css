@@ -1,0 +1,90 @@
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--carbon);
+  color: rgba(255,255,255,0.75);
+  padding-top: 72px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  padding-bottom: 56px;
+}
+
+/* Columna marca */
+
+.footer__logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blanco);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.footer__logo strong { 
+  color: var(--dorado); 
+}
+
+.footer__tagline {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+/* Columnas de links */
+
+.footer__links-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__col-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dorado);
+  font-family: var(--font-mono);
+  margin-bottom: 16px;
+}
+
+.footer__col-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__col-links a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  transition: color var(--transition);
+}
+.footer__col-links a:hover { color: var(--blanco); }
+
+/* Bottom */
+.footer__bottom {
+  background: rgba(0,0,0,0.25);
+  padding: 18px 0;
+}
+.footer__bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: rgba(255, 0, 0, 0.45);
+}
+
+
+

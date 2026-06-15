@@ -1,0 +1,25 @@
+
+
+
+[
+  { "icono": "✈️", 
+  "valor": "2500",  
+  "sufijo": " FCFA", 
+  "label": "Gasto medio por turista" 
+},
+  { "icono": "🏨", 
+  "valor": "40",    
+  "sufijo": "+",     
+  "label": "Establecimientos adheridos" 
+},
+  { "icono": "🎯", 
+  "valor": "30",    
+  "sufijo": "%",     
+  "label": "Descuento máximo Premium" 
+},
+  { "icono": "🌍", 
+  "valor": "3",     
+  "sufijo": " min",  
+  "label": "Para solicitar tu Bono" 
+}
+]

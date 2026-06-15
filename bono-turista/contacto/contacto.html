@@ -1,0 +1,59 @@
+<!-- CONTACTO – Bono Turista -->
+<section class="contacto" id="contacto">
+  <div class="container contacto__inner">
+
+    <!-- Info -->
+    <div class="contacto__info">
+      <span class="section-tag">Estamos aquí para ayudarte</span>
+      <h2 class="section-title contacto__title">Contáctanos</h2>
+      <p class="section-subtitle">¿Tienes dudas sobre el Bono Turista? Escríbenos y te respondemos en menos de 24 horas.</p>
+
+      <div class="contacto__datos" id="contactoDatos">
+        <!-- Generado por JS -->
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contacto__form-wrap">
+      <form class="contacto__form" id="contactoForm" novalidate>
+
+        <div class="form-group">
+          <label for="cNombre">Nombre completo *</label>
+          <input type="text" id="cNombre" name="nombre" placeholder="Tu nombre" />
+          <span class="msg-error" id="cNombreErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cEmail">Correo electrónico *</label>
+          <input type="email" id="cEmail" name="email" placeholder="correo@ejemplo.com" />
+          <span class="msg-error" id="cEmailErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cAsunto">Asunto *</label>
+          <select id="cAsunto" name="asunto">
+            <option value="">Selecciona un asunto</option>
+            <option value="bono">Solicitar Bono Turista</option>
+            <option value="establecimiento">Unirse como establecimiento</option>
+            <option value="reserva">Consulta de reserva</option>
+            <option value="otro">Otro</option>
+          </select>
+          <span class="msg-error" id="cAsuntoErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cMensaje">Mensaje *</label>
+          <textarea id="cMensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." maxlength="1000"></textarea>
+          <span class="msg-error" id="cMensajeErr"></span>
+          <span class="contacto__chars"><span id="cChars">0</span>/1000</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary contacto__submit">
+          Enviar mensaje →
+        </button>
+
+        <div id="contactoMsg" style="display:none"></div>
+      </form>
+    </div>
+  </div>
+</section>

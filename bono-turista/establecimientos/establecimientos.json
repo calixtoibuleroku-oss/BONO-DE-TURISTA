@@ -1,0 +1,127 @@
+
+
+
+
+[
+{ "nombre": "GRAN HOTEL DJIBLOHO", 
+"tipo": "hotel",        
+"ciudad": "Djibloho",  
+"descuento": "25%", 
+"icono": "🏨", 
+"destacado": true  },
+
+
+{ "nombre": " HOTEL IBIS BATA",         
+"tipo": "hotel",        
+"ciudad": "BATA",    
+"descuento": "20%", 
+"icono": "🏨", 
+"destacado": false },
+
+{ "nombre": "HOTEL CARMEN",         
+"tipo": "hotel",        
+"ciudad": "BATA",    
+"descuento": "18%", 
+"icono": "🏨", 
+"destacado": false },
+
+{ "nombre": "HOTEL COLINAS", 
+"tipo": "hotel", 
+"ciudad": "Malabo",      
+"descuento": "10%", 
+"icono": "🏤", 
+"destacado": false },
+
+ { "nombre": " HOTEL BASILICA", 
+  "tipo": "HOTEL", 
+  "ciudad": "MONGOMO",      
+  "descuento": "10%", 
+  "icono": "🏤", 
+  "destacado": false },
+
+   { "nombre": " HOTEL AKOACANG", 
+  "tipo": "HOTEL", 
+  "ciudad": "MONGOMO",      
+  "descuento": "10%", 
+  "icono": "🏤", 
+  "destacado": false },
+
+
+
+{ "nombre": "HOTEL BISILA PALACE", 
+"tipo": "hotel", 
+"ciudad": "Malabo",      
+"descuento": "10%", 
+"icono": "🏤", 
+"destacado": false },
+
+
+{ "nombre": "CEIBA",     
+"tipo": "aerolinea",    
+"ciudad": "BATA-MALABO",    
+"descuento": "15%", 
+"icono": "✈️", 
+"destacado": true  },
+
+{ "nombre": "CRONOS",     
+"tipo": "aerolinea",    
+"ciudad": "BATA-MALABO",    
+"descuento": "15%", 
+"icono": "✈️", 
+"destacado": true  },
+
+
+
+
+{ "nombre": "RESTAURANTE MANILA",
+"tipo": "restaurante",  
+"ciudad": "BATA",    
+"descuento": "30%", 
+"icono": "🍽️", 
+"destacado": false },
+
+{ "nombre": "CAFE MALABO",   
+"tipo": "restaurante",  
+"ciudad": "MALABO",      
+"descuento": "25%", 
+"icono": "🍽️", 
+"destacado": false },
+
+
+
+  { "nombre": "SUPERMERCADO EGTC", 
+  "tipo": "supermercado", 
+  "ciudad": "Bata/MALABO",      
+  "descuento": "10%", 
+  "icono": "🛒", 
+  "destacado": false },
+
+ { "nombre": "SUPERMERCADO MARTINEZ HERMANOS", 
+ "tipo": "supermercado", 
+ "ciudad": "Bata/MALABO",      
+ "descuento": "10%", 
+ "icono": "🛒", 
+ "destacado": false },
+
+  { "nombre": "AGENCIA KASAF",   
+  "tipo": "transporte",   
+  "ciudad": "BATA",    
+  "descuento": "20%", 
+  "icono": "🚖", 
+  "destacado": false },
+
+  { "nombre": "SIN SIN",   
+  "tipo": "transporte",   
+  "ciudad": "Malabo",    
+  "descuento": "10%", 
+  "icono": "🚖", 
+  "destacado": false },
+
+ 
+  { "nombre": "HOTEL ",   
+  "tipo": "restaurante",  
+  "ciudad": "Bata",      
+  "descuento": "25%", 
+  "icono": "🍽️", 
+  "destacado": false }
+]

@@ -1,0 +1,113 @@
+/* ===== ESTABLECIMIENTOS ===== */
+.establecimientos {
+  padding: 96px 0;
+  background: var(--blanco);
+}
+
+.establecimientos__header { margin-bottom: 40px; }
+
+/* Filtros */
+.establecimientos__filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.filtro-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(26,92,58,0.25);
+  background: transparent;
+  color: var(--gris);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+.filtro-btn:hover { border-color: var(--verde); color: var(--verde); }
+.filtro-btn.active {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: var(--blanco);
+}
+
+/* Grid */
+.establecimientos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  min-height: 200px;
+}
+
+.est-card {
+  border-radius: var(--r-md);
+  border: 1.5px solid rgba(0,0,0,0.08);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  background: var(--blanco);
+}
+.est-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.est-card.destacado {
+  border-color: var(--dorado);
+  background: linear-gradient(135deg, #fffdf4, var(--blanco));
+}
+
+.est-card__badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: var(--dorado);
+  color: var(--carbon);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.est-card__icon { font-size: 2rem; }
+
+.est-card__nombre {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--carbon);
+}
+
+.est-card__ciudad {
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+
+.est-card__descuento {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--verde);
+  margin-top: 4px;
+}
+
+.establecimientos__nota {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+.est-link { color: var(--verde); font-weight: 600; }
+.est-link:hover { text-decoration: underline; }
+
+/* Oculto por filtro */
+.est-card.hidden { display: none; }
+
+@media (max-width: 900px) {
+  .establecimientos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .establecimientos__grid { grid-template-columns: 1fr; }
+}

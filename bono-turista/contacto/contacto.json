@@ -1,0 +1,22 @@
+{
+  "datos": [
+    { "icono": "📍", "label": "Sede principal", "valor": "Djibloho, Guinea Ecuatorial" },
+    { "icono": "✈️", "label": "Punto aeropuerto", "valor": "Aeropuerto Internacional de Malabo" },
+    { "icono": "📧", "label": "Correo", "valor": "info@bonoturista.gq" },
+    { "icono": "🕐", "label": "Atención", "valor": "Lun – Vie: 08:00 – 18:00" }
+  ],
+  "validacion": {
+    "campos": [
+      { "id": "cNombre",  "errId": "cNombreErr",  "tipo": "texto",    "minLen": 3  },
+      { "id": "cEmail",   "errId": "cEmailErr",   "tipo": "email"                  },
+      { "id": "cAsunto",  "errId": "cAsuntoErr",  "tipo": "select"                 },
+      { "id": "cMensaje", "errId": "cMensajeErr", "tipo": "textarea", "minLen": 10 }
+    ],
+    "mensajes": {
+      "requerido":     "Este campo es obligatorio.",
+      "emailInvalido": "Introduce un correo electrónico válido.",
+      "textoCorto":    "Debe tener al menos {min} caracteres.",
+      "exito":         "✅ Mensaje enviado. Te contactaremos en menos de 24 horas."
+    }
+  }
+}

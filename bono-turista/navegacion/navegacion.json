@@ -1,0 +1,14 @@
+{
+  "logo": {
+    "icono": "🌿",
+    "nombre": "BonoTurista"
+  },
+  "links": [
+    { "id": "hero",             "label": "Inicio" },
+    { "id": "como-funciona",    "label": "Cómo funciona" },
+    { "id": "servicios",        "label": "Servicios" },
+    { "id": "establecimientos", "label": "Establecimientos" },
+    { "id": "contacto",         "label": "Contacto" }
+  ],
+  "cta": "Solicitar Bono"
+}

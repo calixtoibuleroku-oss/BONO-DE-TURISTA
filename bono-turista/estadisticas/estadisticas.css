@@ -1,0 +1,45 @@
+/* ===== ESTADÍSTICAS ===== */
+.stats {
+  background: var(--arena);
+  padding: 56px 0;
+  border-bottom: 1px solid rgba(26,92,58,0.1);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stats__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--blanco);
+  border-radius: var(--r-md);
+}
+.stats__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stats__icon { font-size: 2rem; margin-bottom: 12px; }
+
+.stats__value {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--verde);
+  line-height: 1;
+}
+.stats__suffix { color: var(--dorado); }
+
+.stats__label {
+  font-size: 0.85rem;
+  color: var(--gris);
+  margin-top: 6px;
+  font-weight: 500;
+}
+

@@ -1,0 +1,26 @@
+[
+  {
+    "numero": "01",
+    "icono": "🌐",
+    "titulo": "Regístrate en la web",
+    "descripcion": "Crea tu perfil en la plataforma con tus datos de viaje. El proceso tarda menos de 3 minutos."
+  },
+  {
+    "numero": "02",
+    "icono": "🪪",
+    "titulo": "Recibe tu Tarjeta Premium",
+    "descripcion": "En el aeropuerto internacional o en nuestra oficina principal en Djibloho, recibes tu tarjeta con código QR personalizado."
+  },
+  {
+    "numero": "03",
+    "icono": "📲",
+    "titulo": "Escanea en los establecimientos",
+    "descripcion": "Presenta tu código QR en cualquier establecimiento adherido: hoteles, restaurantes, supermercados y transporte."
+  },
+  {
+    "numero": "04",
+    "icono": "💰",
+    "titulo": "Disfruta tus descuentos",
+    "descripcion": "Obtén hasta un 30% de descuento según tu procedencia. La tarjeta es reutilizable durante toda tu estancia."
+  }
+]

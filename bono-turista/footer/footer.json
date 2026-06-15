@@ -1,0 +1,38 @@
+
+
+{
+  "social": [
+    { "icono": "X",  "label": "Twitter/X",  "url": "#" },
+    { "icono": "📘", "label": "Facebook",    "url": "#" },
+    { "icono": "📸", "label": "Instagram",   "url": "https://www.instagram.com/?e=1348020" }
+  ],
+  "columnas": [
+    {
+      "titulo": "Plataforma",
+      "links": [
+        { "label": "Inicio",           "href": "#hero"             },
+        { "label": "Cómo funciona",    "href": "#como-funciona"    },
+        { "label": "Servicios",        "href": "#servicios"        },
+        { "label": "Establecimientos", "href": "#establecimientos" }
+      ]
+    },
+    {
+      "titulo": "Servicios",
+      "links": [
+        { "label": "Alojamiento",    "href": "#servicios" },
+        { "label": "Vuelos",         "href": "#servicios" },
+        { "label": "Restaurantes",   "href": "#servicios" },
+        { "label": "Transporte",     "href": "#servicios" }
+      ]
+    },
+    {
+      "titulo": "Empresa",
+      "links": [
+        { "label": "Sobre nosotros", "href": "#contacto" },
+        { "label": "Únete como socio","href": "#contacto" },
+        { "label": "Contacto",       "href": "#contacto" },
+        { "label": "Política de privacidad", "href": "#" }
+      ]
+    }
+  ]
+}

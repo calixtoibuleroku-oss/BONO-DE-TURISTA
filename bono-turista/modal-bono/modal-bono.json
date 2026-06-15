@@ -1,0 +1,60 @@
+
+
+
+{
+  "campos": [
+    { "id": "mNombre",   
+    "errId": "mNombreErr",   
+    "tipo": "texto",    
+    "label": "Nombre"        
+   
+  },
+    { "id": "mApellidos",
+    "errId": "mApellidosErr",
+    "tipo": "texto",    
+    "label": "Apellidos"        
+
+  },
+    { "id": "mEmail",    
+    "errId": "mEmailErr",    
+    "tipo": "email",    
+    "label": "Correo electrónico" 
+  },
+
+    { "id": "mPais",     
+    "errId": "mPaisErr",     
+    "tipo": "select",   
+    "label": "País de procedencia" 
+  },
+    { "id": "mLlegada", 
+     "errId": "mLlegadaErr",  
+     "tipo": "fecha",    
+     "label": "Fecha de llegada"  
+    },
+    { "id": "mSalida",   
+    "errId": "mSalidaErr",   
+    "tipo": "fecha",    
+    "label": "Fecha de salida"   
+  },
+    { "id": "mRecogida", 
+    "errId": "mRecogidaErr", 
+    "tipo": "select",   
+    "label": "Punto de recogida" 
+  },
+    { "id": "mTerminos", 
+    "errId": "mTerminosErr", 
+    "tipo": "checkbox", 
+    "label": "Términos y condiciones" 
+  }
+  ],
+  "mensajes": {
+    "requerido": "Este campo es obligatorio.",
+    "emailInvalido": "Introduce un correo electrónico válido.",
+    "textoCorto": "Debe tener al menos {min} caracteres.",
+    "textoLargo": "No puede superar {max} caracteres.",
+    "fechaInvalida": "Selecciona una fecha válida.",
+    "salidaAnterior": "La fecha de salida debe ser posterior a la de llegada.",
+    "checkboxRequerido": "Debes aceptar los términos y condiciones.",
+    "exito": "✅ ¡Solicitud enviada! Recibirás un correo con instrucciones para recoger tu Bono Turista."
+  }
+}

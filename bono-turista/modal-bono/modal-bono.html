@@ -1,0 +1,97 @@
+
+
+
+<!-- MODAL SOLICITAR BONO – Bono Turista -->
+ 
+<div class="modal-overlay" id="modalBono" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+  <div class="modal">
+    <!-- Cerrar -->
+    <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+
+    <div class="modal__left">
+      <span class="section-tag">Gratis para turistas</span>
+      <h2 class="modal__title" id="modalTitulo">Solicita tu<br /><em>Bono Turista</em></h2>
+      <p class="modal__desc">
+        Rellena el formulario y recibirás instrucciones para recoger tu tarjeta Premium con código QR en el aeropuerto o en nuestra sede.
+      </p>
+      <ul class="modal__features">
+        <li>✅ Completamente gratuito</li>
+        <li>✅ Descuentos hasta el 30%</li>
+        <li>✅ Válido en toda Guinea Ecuatorial</li>
+        <li>✅ Tarjeta reutilizable</li>
+      </ul>
+    </div>
+
+    <div class="modal__right">
+      <form class="modal__form" id="modalForm" novalidate>
+
+        <div class="form-group">
+          <label for="mNombre">Nombre *</label>
+          <input type="text" id="mNombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name" />
+          <span class="msg-error" id="mNombreErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mApellidos">Apellidos *</label>
+          <input type="text" id="mApellidos" name="apellidos" placeholder="Tus apellidos" autocomplete="family-name" />
+          <span class="msg-error" id="mApellidosErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mEmail">Correo electrónico *</label>
+          <input type="email" id="mEmail" name="email" placeholder="correo@ejemplo.com" autocomplete="email" />
+          <span class="msg-error" id="mEmailErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mPais">País de procedencia *</label>
+          <select id="mPais" name="pais">
+            <option value="">Selecciona tu país</option>
+            <option value="es">España</option>
+            <option value="fr">Francia</option>
+            <option value="cm">Camerún</option>
+            <option value="ga">Gabón</option>
+            <option value="ng">Nigeria</option>
+            <option value="otro">Otro</option>
+          </select>
+          <span class="msg-error" id="mPaisErr"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mLlegada">Fecha llegada *</label>
+            <input type="date" id="mLlegada" name="llegada" />
+            <span class="msg-error" id="mLlegadaErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="mSalida">Fecha salida *</label>
+            <input type="date" id="mSalida" name="salida" />
+            <span class="msg-error" id="mSalidaErr"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mRecogida">Punto de recogida *</label>
+          <select id="mRecogida" name="recogida">
+            <option value="">Selecciona punto</option>
+            <option value="aeropuerto">Aeropuerto Internacional Malabo</option>
+            <option value="djibloho">Sede central Djibloho</option>
+          </select>
+          <span class="msg-error" id="mRecogidaErr"></span>
+        </div>
+
+        <div class="form-group form-group--check">
+          <input type="checkbox" id="mTerminos" name="terminos" />
+          <label for="mTerminos">Acepto los <a href="#" class="est-link">términos y condiciones</a> *</label>
+          <span class="msg-error" id="mTerminosErr"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary modal__submit" id="modalSubmit">
+          Solicitar mi Bono gratis ✦
+        </button>
+
+        <div id="modalFormMsg" style="display:none"></div>
+      </form>
+    </div>
+  </div>
+</div>
